@@ -1,0 +1,130 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+#hero-home {
+    height: 650px;
+    background-image: url(pedro-lastra-Nyvq2juw4_o-unsplash.jpg);
+    background-size: cover;
+    opacity: 5.5;
+}
+
+.home-text {
+    text-align: center;
+    color: white;
+    padding: 250px 0;
+}
+
+.home-text h1 {
+    font-size: 3.5em;
+}
+
+
+#homebase-difference {
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.homebase-text {
+    padding-top: 25px;
+}
+
+.homebase-text h1 {
+    font-size: 2.5em;
+    color: black;
+}
+
+.room-img {
+    margin-top: -50px;
+}
+
+.why-line {
+    border-top: 2px solid black;
+    width: 15%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.homebase-text p {
+    font-size: 25px;
+}
+
+.why {
+    padding: 50px;
+}
+
+.hero-section {
+    height: 500px;
+    margin-top: 25px;
+}
+
+.difference-section {
+    margin-top: 25px;
+}
+
+.home-banner {
+    background-image: url(r-architecture-uFQOmuz8JVY-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 650px;
+    margin-bottom: 50px;
+}
+
+#community {
+    text-align: center;
+}
+
+.community-text {
+    padding-bottom: 25px;
+}
+
+.community-text h1 {
+    font-size: 2.5em;
+}
+
+.community-text p {
+    font-size: 20px;
+}
+
+#cta {
+    background-size: cover;
+    background-image: url(brooke-cagle-g1Kr4Ozfoac-unsplash);
+    background-position: center;
+    height: 350px;
+}
+
+.cta-content {
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+}
+
+#app {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.app-feature-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.app-row .col {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.app-row .col .fa {
+    font-size: 35px;
+}
+
+footer {
+
+    color: black;
+    text-align: center;
+}
+

@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="collapse navbar-collapse navbar-right" id="navbar-collapsible-content">
+          <div class="container-fluid">
+    <%= image_tag('HBlogo.png', height: "50") %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'Book', bookings_index_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Why Homebase', root_path, class: "nav-link" %>
+        </li>
+      </ul>
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+            <li class="nav-link"><%= image_tag current_user.avatar.url, class: "user-image" %></li>
+            <li class="nav-link"><i class="fa fa-envelope-o"></i></li>
+            <span class="label">12</span>
+            <li class="nav-link"><i class="fa fa-bell-o"></i></li>
+             <span class="label">4</span>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle user user-menu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    
+                    <span><%= current_user.name %></span>
+                </a>
+                
+
+                <ul class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown">
+                    <li class="dropdown-item"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                    <li class="dropdown-item"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+                    <li class="dropdown-item"><%= link_to 'Dashboard', pages_account_path %></li>
+                    <li class="dropdown-item"><%= link_to 'Account', accounts_path %></li>
+                </ul>
+            </li>
+
+            <% else # user not signed it %>
+                <li><button class="btn btn-outline-primary"><%= link_to 'Login', login_path %></button></li>
+                <li><button class="btn btn-outline-primary"><%= link_to 'Signup', signup_path %></button></li>
+            <% end # if user is signed it %>
+            </ul>
+      </ul>
+    </div>
+    </div>
+    </div>
+</div>
+</nav>

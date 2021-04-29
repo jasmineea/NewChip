@@ -1,0 +1,7 @@
+{
+  "name": "Homebasev1",
+  "private": true,
+  "dependencies": {
+    "bootstrap-icons": "^1.4.1"
+  }
+}

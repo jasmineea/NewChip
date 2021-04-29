@@ -1,0 +1,66 @@
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column sidebar-menu">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="home"></span>
+              
+              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file"></span>
+              <i class="fa fa-home"><%= link_to 'Bookings', bookings_index_path %></i>
+              <span class="pull-right-container">
+              <small class="label pull-right bg-green">1</small>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+          <a href="#">
+            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-yellow">12</small>
+            </span>
+          </a>
+          </li>
+          <li class="nav-item">
+            <i class="fa fa-users"></i> <span><%= link_to 'Community Feed', posts_index_path %></span>
+              <span data-feather="users"></span>
+              
+              <span class="pull-right-container">
+              <small class="label pull-right bg-blue">17</small>
+              </span>
+          
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2"></span>
+              <i class="fa fa-cutlery"></i> <span>Cafe</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              <i class="fa fa-calendar"></i> <span>Classes</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              <i class="fa fa-wrench"></i> <span>Maintenance</span>
+            </a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              <i class="fa fa-truck"></i> <span>Packages</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-red">3</small>
+              </span>
+            </a>
+          </li>
+        </ul>
+    </nav>

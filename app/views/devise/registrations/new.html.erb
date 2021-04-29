@@ -1,0 +1,30 @@
+<div id="sign-up-form" class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h2>Welcome to the future of living.</h2>
+      <p>Create your profile for booking management, self checking services and our Homebase marketplace. See you inside!</p>
+
+      <%= bootstrap_form_for(resource, 
+                       :as => resource_name, 
+                       :url => registration_path(resource_name)) do |f| %>
+      <%= f.file_field :avatar, 
+            class: 'form-control' %>
+      <%= f.text_field :name, 
+	           placeholder: 'username (will be shown publicly)', 
+	           class: 'form-control' %>
+      <%= f.text_field :email, 
+	           placeholder: 'email', 
+	           class: 'form-control' %>
+      <%= f.password_field :password, 
+                       placeholder: 'password', 
+                       class: 'form-control' %>
+      <%= f.password_field :password_confirmation, 
+                       placeholder: 'password confirmation', 
+                       class: 'form-control' %>
+      <%= f.submit 'Sign up', class: 'btn sign-up-button btn-outline-primary' %>
+      <% end %>
+
+      <button class="btn btn-outline-dark"><%= render "devise/shared/links" %></button>
+    </div>
+  </div>
+</div>

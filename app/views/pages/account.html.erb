@@ -1,0 +1,214 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column sidebar-menu">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="home"></span>
+              
+              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file"></span>
+              <i class="fa fa-home"><%= link_to 'Bookings', bookings_index_path %></i>
+              <span class="pull-right-container">
+              <small class="label pull-right bg-green">1</small>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+          <a href="#">
+            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-yellow">12</small>
+            </span>
+          </a>
+          </li>
+          <li class="nav-item">
+            <i class="fa fa-users"></i> <span><%= link_to 'Community Feed', posts_index_path %></span>
+              <span data-feather="users"></span>
+              
+              <span class="pull-right-container">
+              <small class="label pull-right bg-blue">17</small>
+              </span>
+          
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2"></span>
+              <i class="fa fa-cutlery"><%= link_to 'Cafe', meals_feed_path %></i> 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              <i class="fa fa-calendar"><%= link_to 'Classes', calender_index_path %></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              <i class="fa fa-wrench"></i> <span>Maintenance</span>
+            </a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              <i class="fa fa-truck"></i> <span>Packages</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-red">3</small>
+              </span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+        </div>
+      </div>
+            <h5>Welcome back <%= current_user.name %>, this is your user dashboard.</h5>
+            <p>What can we do for you?</p>
+
+        <div class="dashboard">
+            <div class="row">
+                <div class="col-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5>Current Booking</h5>
+                            </div>
+                            <div class="card-body">
+                                <%= image_tag('pedro-lastra-Nyvq2juw4_o-unsplash.jpg', class:"card-img-top") %>
+                                <div class="card-text">
+                                <h5>Homebase - New York</h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Room Type</p>
+                                        <h5>Base</h5>
+                                    </div>
+                                    <div class="col">
+                                        <p>Booking Date</p>
+                                        <h5>Oct 25th - 28th 2020</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title">
+                           <h5>Connected Devices</h5>
+                        </div>          
+                    <div class="row">
+                    <div class="col">
+                    <i class="fa fa-wifi info-box-icon bg-primary"></i>
+                    </div>
+                    <div class="col">
+                     <i class="fa fa-lightbulb-o info-box-icon bg-green"></i>
+                      </div>
+                      <div class="col">
+                      <i class="fa fa-key info-box-icon bg-yellow"></i>
+                      </div>
+                      </div>
+                    </div>
+                 </div>
+                 <br>
+
+<div class="community-feed">
+    
+  <div class="card box box-widget">
+  <div class="card-body"></div>
+    <div class="card-title">
+      <h5>Community Feed</h5>
+    </div>
+    <% @posts.each do |post|%>
+    <div class="card-text">
+      <p class="lead"><%= post.title %></p>
+      <p><%=post.content %></p>
+    </div>
+      <% end %>
+  </div>
+</div>
+      </div>
+
+
+<div class="wallet container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Wallet</h1>
+          </div>
+          <div class="card-text">
+          Wallet model informations goes here
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card">
+      <div class="card-body">
+        <div class="card-title">
+          <h1>Crypto</h1>
+        </div>
+        <div class="card-text">
+        Wallet model goes here
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="past-bookings">
+  <div class="card">
+    <div class="card-body">
+      <h1 class="card-title">Past Bookings</h1>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Room Name</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <% @bookings.each do |booking|%>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td><%= booking.name %></td>
+              <td><%= booking.description %></td>
+              <td><%= booking.room_id %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>  
+  </div>
+
+</div>
+
+
+
+    </main>
+</div>

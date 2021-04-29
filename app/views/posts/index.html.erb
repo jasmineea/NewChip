@@ -1,0 +1,15 @@
+<div class="community-feed container">
+    <h1 class="text-center">Community Feed</h1>
+    <div class="card">
+        <div class="card-body">
+            <% @posts.each do |post| %>
+            <div class="card-title">
+                <h5><%= post.title %></h5>
+            </div>
+            <div class="card-text">
+                <p><%= post.content %></p>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
